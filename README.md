@@ -1,3 +1,5 @@
+## Example
+
 ```
 import wayland_struct;
 
