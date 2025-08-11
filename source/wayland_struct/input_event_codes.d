@@ -944,3 +944,29 @@ enum SND_BELL  = 0x01;
 enum SND_TONE  = 0x02;
 enum SND_MAX   = 0x07;
 enum SND_CNT   = (SND_MAX+1);
+
+auto
+decode_enum (string STARTSWITH) (int btn) {
+    import std.string;
+    alias input_event_codes = __traits (parent, SND_MAX);
+
+    static
+    foreach (m; __traits (allMembers,input_event_codes)) {
+        static if (m.startsWith (STARTSWITH)/* && is (__traits (getMember,input_event_codes,m)==int)*/) {
+            //pragma (msg,m," = ", __traits (getMember,input_event_codes,m));
+            if (btn == __traits (getMember,input_event_codes,m)) return m;
+        }
+    }
+
+    return "undefined";
+}
+
+alias decode_btn = decode_enum!"BTN_";
+alias decode_key = decode_enum!"KEY_";
+alias decode_snd = decode_enum!"SND_";
+alias decode_led = decode_enum!"LED_";
+alias decode_rep = decode_enum!"REP_";
+alias decode_msc = decode_enum!"MSC_";
+alias decode_sw  = decode_enum!"SW_";
+alias decode_rel = decode_enum!"REL_";
+alias decode_abs = decode_enum!"ABS_";
