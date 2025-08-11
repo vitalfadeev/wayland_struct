@@ -14,6 +14,7 @@ import wayland_struct.util  : wl_message;
 import wayland_struct.util  : wl_interface;
 import wayland_struct.util  : wl_fixed_t;
 import wayland_struct.util  : wl_array;
+import wayland_struct.protocol.wayland;
 
 // module wayland.wl_registry;
 
@@ -29,18 +30,18 @@ wl_registry {
   pragma (inline,true):
   void*
   bind (uint name, const wl_interface* interface_, uint version_ ) {
-    return cast (void*) 
-        wl_proxy_marshal_flags (
-            cast (wl_proxy*) &this,
-            opcode.bind, 
-            interface_, 
-            version_, 
-            0, 
-            name, 
-            interface_.name, 
-            version_, 
-            null
-        );
+  	return cast (void*) 
+  		wl_proxy_marshal_flags (
+  			cast (wl_proxy*) &this,
+  	        opcode.bind, 
+  	        interface_, 
+  	        version_, 
+  	        0, 
+  	        name, 
+  	        interface_.name, 
+  	        version_, 
+  	    	null
+  		);
   }
 
   // Events
