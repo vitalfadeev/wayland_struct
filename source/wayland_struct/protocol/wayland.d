@@ -1,3 +1,4 @@
+// Generated with wayland-scanner-d
 // protocol wayland
 module wayland_struct.protocol.wayland;
 

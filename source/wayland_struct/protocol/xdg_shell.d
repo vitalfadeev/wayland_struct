@@ -1,3 +1,4 @@
+// Generated with wayland-scanner-d
 // protocol xdg_shell
 module wayland_struct.protocol.xdg_shell;
 
