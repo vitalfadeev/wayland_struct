@@ -18,9 +18,6 @@ go () {
 
 struct 
 wayland_ctx {
-    int                 width  = WIDTH;
-    int                 height = HEIGHT;
-
     wl_display__impl    wl_display;
     wl_registry__impl   wl_registry;
 }
