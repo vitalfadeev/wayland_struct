@@ -20,6 +20,16 @@ struct
 wayland_ctx {
     wl_display__impl    wl_display;
     wl_registry__impl   wl_registry;
+    wl_seat__impl       wl_seat;
+    wl_compositor__impl wl_compositor;
+    wl_surface__impl    wl_surface;
+    wl_shm__impl        wl_shm;
+    wl_shm_pool__impl   wl_shm_pool;
+    wl_buffer__impl     wl_buffer;
+
+    xdg_wm_base__impl   xdg_wm_base;
+    xdg_surface__impl   xdg_surface;
+    xdg_toplevel__impl  xdg_toplevel;
 }
 
 
