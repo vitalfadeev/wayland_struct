@@ -112,6 +112,7 @@ BIND (T) {
         (T.stringof, T.stringof, T.stringof, T.stringof, T.stringof, T.stringof, T.stringof);
 }
 
-
+...
+more in https://github.com/vitalfadeev/wayland_struct
 ```
 
