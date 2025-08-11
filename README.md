@@ -100,6 +100,6 @@ wl_registry__impl {
 
 
 ...
-more in https://github.com/vitalfadeev/wayland_struct
+more in https://github.com/vitalfadeev/wayland_test
 ```
 
