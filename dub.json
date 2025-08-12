@@ -7,4 +7,7 @@
 	"description": "A minimal D application.",
 	"license": "proprietary",
 	"libs": ["wayland-client"],
+	"dependencies": {
+		"libinput_d"       : {"path":"deps/libinput_d"},
+	},			
 }
